@@ -1,0 +1,28 @@
+/*Resets*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--p-font-color);
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+/*Var*/
+:root {
+    --bg-color: #f3f5f8;
+    --btn-color: #e6690a;
+    --h1-font-color: #1a3725;
+    --h2-font-color: #1a2e19;
+    --h3-font-color: #1a2e19;
+    --p-font-color: #1a3725;
+    --p-light-font-color: #f3f5f8;
+    --link-font-color: #1a2e19;
+    --tag-font-color: #e6690a;
+    --btn-border-radius: 8px;
+    --tiny-card-border-radius: 16px;
+    --medium-card-border-radius: 20px;
+    --img-border-radius: 24px;
+}
