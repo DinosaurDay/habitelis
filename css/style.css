@@ -20,6 +20,7 @@ ul {
 
 :root {
     --bg-color: #f3f5f8;
+    --bg-dark-color: #1a3725;
     --btn-color: #e6690a;
     --h1-font-color: #1a3725;
     --h2-font-color: #1a2e19;
@@ -81,6 +82,57 @@ header {
     color: var(--link-light-font-color);
 }
 
+footer {
+    background-color: var(--bg-dark-color);
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    font-size: 14px;
+    font-family: var(--main-font);
+    color: var(--p-light-font-color);
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+hr {
+    color: #ffffff;
+    opacity: 10%;
+}
+
+.copy-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy-container p {
+    opacity: 50%;
+}
+
+.rs-container {
+    display: flex;
+    gap: 16px;
+}
+
+.rs-bubble {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(243, 245, 248, 0.1);
+    border-radius: 18px;
+}
+
+.rs-bubble a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 1310px) {
@@ -91,5 +143,19 @@ header {
     header {
         flex-direction: column;
         gap: 32px;
+    }
+
+    .brand-container,
+    .copy-container {
+        align-items: center;
+    }
+
+    .brand-container p {
+        text-align: center;
+    }
+
+    .copy-container {
+        flex-direction: column;
+        gap: 16px;
     }
 }
