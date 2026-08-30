@@ -206,6 +206,32 @@ header {
     border-radius: 8px;
 }
 
+.why-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    padding: 100px 120px;
+}
+
+.arguments-container {
+    max-width: 1200px;
+    display: flex;
+    gap: 64px;
+}
+
+.argument-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.argument-card > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 footer {
     background-color: var(--main-color);
     padding: 50px 120px;
@@ -295,6 +321,14 @@ hr {
 
     .issue-card {
         align-items: center;
+    }
+
+    .arguments-container {
+        flex-direction: column;
+    }
+
+    .argument-card > :first-child {
+        justify-content: center;
     }
 
     .brand-container,
