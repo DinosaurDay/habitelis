@@ -8,28 +8,46 @@
 a {
     /* color: var(--link-light-font-color); */
     text-decoration: none;
-    font-family: var(--main-font);
 }
 
 ul {
     list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+a {
     font-family: var(--main-font);
+}
+
+h1 {
+    font-size: clamp(2.9rem, 1.09rem + 4.55vw, 4.5rem);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+h3 {
+    font-size: clamp(16px, 3.75vw, 20px);
+    font-weight: 600;
+    color: var(--main-color);
 }
 
 /*Var*/
 
 :root {
-    --bg-color: #f3f5f8;
-    --bg-dark-color: #1a3725;
-    --btn-color: #e6690a;
-    --h1-font-color: #1a3725;
-    --h2-font-color: #1a2e19;
-    --h3-font-color: #1a2e19;
-    --p-font-color: #1a3725;
-    --p-light-font-color: #f3f5f8;
-    --link-font-color: #1a2e19;
-    --link-light-font-color: #f3f5f8;
-    --tag-font-color: #e6690a;
+    --white-color: #f3f5f8;
+    --main-color: #1a3725;
+    --secondary-color: #e6690a;
+    --bg-secondary-color: rgba(230, 105, 10, 0.1);
     --main-font: Helvetica, sans-serif;
     --btn-border-radius: 8px;
     --tiny-card-border-radius: 16px;
@@ -40,7 +58,6 @@ ul {
 /*Desktop*/
 
 header {
-    /* height: 10vh; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,28 +86,128 @@ header {
 }
 
 .menu-container ul li a {
-    color: var(--link-font-color);
+    color: var(--main-color);
 }
 
 .contact-btn {
-    background-color: var(--btn-color);
-    padding: 14px 28px;
+    background-color: var(--secondary-color);
     border-radius: 8px;
 }
 
 .contact-btn a {
-    color: var(--link-light-font-color);
+    color: var(--white-color);
+}
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.home-desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 632px;
+}
+
+.home-desc-container p {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.home-desc-container span {
+    font-weight: bold;
+}
+
+.location-tag {
+    background-color: var(--bg-secondary-color);
+    max-width: 217px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.location-tag p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.btns-container {
+    display: flex;
+    gap: 16px;
+}
+
+.contact-btn a,
+.offers-btn a {
+    display: block;
+    padding: 14px 28px;
+}
+
+.offers-btn {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--main-color);
+    border-radius: 8px;
+}
+
+.offers-btn a {
+    color: var(--main-color);
+    text-align: center;
+}
+
+.issues {
+    background-color: var(--white-color);
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.issues h2 {
+    max-width: 1210px;
+    text-align: center;
+}
+
+.issues-cards-container {
+    max-width: 1210px;
+    display: flex;
+    gap: 24px;
+}
+
+.issue-card {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 282px;
+    border-width: 1px;
+    border-color: var(--white-color);
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.issue-icon-container {
+    background-color: var(--bg-secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
 }
 
 footer {
-    background-color: var(--bg-dark-color);
+    background-color: var(--main-color);
     padding: 50px 120px;
     display: flex;
     flex-direction: column;
     gap: 64px;
     font-size: 14px;
-    font-family: var(--main-font);
-    color: var(--p-light-font-color);
+    color: var(--white-color);
 }
 
 .brand-container {
@@ -136,6 +253,13 @@ hr {
 /* Mobile */
 
 @media screen and (max-width: 1310px) {
+    h1,
+    h2,
+    h3,
+    p {
+        text-align: center;
+    }
+
     .menu-container ul {
         display: none;
     }
@@ -145,13 +269,31 @@ hr {
         gap: 32px;
     }
 
-    .brand-container,
-    .copy-container {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .home-desc-container {
         align-items: center;
     }
 
-    .brand-container p {
-        text-align: center;
+    .btns-container {
+        flex-direction: column;
+    }
+
+    .issues-cards-container {
+        flex-direction: column;
+    }
+
+    .issue-card {
+        align-items: center;
+    }
+
+    .brand-container,
+    .copy-container {
+        align-items: center;
     }
 
     .copy-container {
