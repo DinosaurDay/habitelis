@@ -14,6 +14,10 @@ ul {
     list-style: none;
 }
 
+hr {
+    border-color: var(--white-color);
+}
+
 h1,
 h2,
 h3,
@@ -47,6 +51,7 @@ h3 {
     --white-color: #f3f5f8;
     --main-color: #1a3725;
     --secondary-color: #e6690a;
+    --bg-main-color: #f8f4ed;
     --bg-secondary-color: rgba(230, 105, 10, 0.1);
     --main-font: Helvetica, sans-serif;
     --btn-border-radius: 8px;
@@ -163,7 +168,7 @@ header {
 }
 
 .issues {
-    background-color: var(--white-color);
+    background-color: var(--bg-main-color);
     padding: 100px 120px;
     display: flex;
     flex-direction: column;
@@ -229,6 +234,103 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.subscriptions {
+    background-color: var(--bg-main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    padding: 120px;
+    color: var(--main-color);
+}
+
+.subscriptions > :first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.subscription-cards-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscription-card {
+    width: 340px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.price-container > :first-child {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.price-container span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.subscription-card > :last-child ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.subscription-card > :last-child ul > :first-child {
+    font-weight: 600;
+}
+
+.subscription-card > :last-child ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.choice-card {
+    max-height: 314px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 24px;
+    border-color: var(--white-color);
+}
+
+.best-choice-card {
+    position: relative;
+    height: 340px;
+    padding: 0 40px;
+    justify-content: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 24px;
+    border-color: var(--secondary-color);
+}
+
+.best-choice-tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    padding: 6px 16px;
+    border-radius: 8px;
+    color: var(--white-color);
+    font-size: 12px;
+    font-family: var(--main-font);
+    font-weight: 700;
 }
 
 .services {
@@ -300,7 +402,7 @@ header {
 }
 
 .values {
-    background-color: var(--white-color);
+    background-color: var(--bg-main-color);
     padding: 100px 120px;
     display: flex;
     flex-direction: column;
@@ -514,6 +616,22 @@ hr {
         justify-content: center;
     }
 
+    .subscriptions {
+        padding: 100px 65px;
+    }
+
+    .subscription-cards-container {
+        flex-direction: column;
+    }
+
+    .subscription-card {
+        width: 280px;
+    }
+
+    .price-container {
+        justify-content: center;
+    }
+
     .services {
         flex-direction: column;
         align-items: center;
@@ -547,7 +665,11 @@ hr {
 
     .contact-solutions-container {
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+    }
+
+    .contact-us {
+        align-items: flex-start;
     }
 
     .brand-container,
