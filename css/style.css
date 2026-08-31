@@ -435,6 +435,7 @@ hr {
     }
 
     .argument-card > :first-child {
+        flex-direction: column;
         justify-content: center;
     }
 
