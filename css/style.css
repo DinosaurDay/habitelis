@@ -232,6 +232,50 @@ header {
     gap: 12px;
 }
 
+.values {
+    background-color: var(--white-color);
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.values > :first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.values-cards-container {
+    display: flex;
+    gap: 24px;
+}
+
+.value-card {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 330px;
+    border-width: 1px;
+    border-color: var(--white-color);
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.value-icon-container {
+    background-color: var(--bg-secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
 .contact {
     padding: 100px 120px;
 }
@@ -392,6 +436,14 @@ hr {
 
     .argument-card > :first-child {
         justify-content: center;
+    }
+
+    .values-cards-container {
+        flex-direction: column;
+    }
+
+    .value-icon-container {
+        align-self: center;
     }
 
     .contact {
