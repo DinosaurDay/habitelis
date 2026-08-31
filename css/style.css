@@ -60,11 +60,13 @@ h3 {
     cursor: pointer;
 }
 
-button {
+button,
+.button {
     transition: transform 0.3s ease;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     transform: scale(1.1);
 }
 
