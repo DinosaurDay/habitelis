@@ -689,7 +689,7 @@ hr {
     }
 
     .issues {
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .issues-cards-container {
@@ -701,7 +701,7 @@ hr {
     }
 
     .why-us {
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .arguments-container {
@@ -714,7 +714,7 @@ hr {
     }
 
     .special-offer {
-        padding: 100px 64px;
+        padding: 100px 44px;
     }
 
     .special-offer-container > :last-child {
@@ -726,11 +726,12 @@ hr {
     }
 
     .subscriptions {
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .subscription-cards-container {
         flex-direction: column;
+        gap: 44px;
     }
 
     .subscription-card {
@@ -744,7 +745,7 @@ hr {
     .services {
         flex-direction: column;
         align-items: center;
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .services-list-container {
@@ -757,7 +758,7 @@ hr {
     }
 
     .values {
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .values-cards-container {
@@ -769,7 +770,7 @@ hr {
     }
 
     .contact {
-        padding: 100px 65px;
+        padding: 100px 45px;
     }
 
     .contact-solutions-container {
