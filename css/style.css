@@ -672,12 +672,14 @@ hr {
     header {
         flex-direction: column;
         gap: 32px;
+        padding: 20px 45px;
     }
 
     .home {
         flex-direction: column;
         align-items: center;
         gap: 48px;
+        padding: 100px 45px;
     }
 
     .home-desc-container {
@@ -714,7 +716,11 @@ hr {
     }
 
     .special-offer {
-        padding: 100px 44px;
+        padding: 100px 35px;
+    }
+
+    .special-offer-container {
+        padding: 50px 20px;
     }
 
     .special-offer-container > :last-child {
@@ -735,7 +741,7 @@ hr {
     }
 
     .subscription-card {
-        width: 280px;
+        width: 240px;
     }
 
     .price-container {
@@ -770,7 +776,11 @@ hr {
     }
 
     .contact {
-        padding: 100px 45px;
+        padding: 100px 35px;
+    }
+
+    .contact-us-container {
+        padding: 50px 20px;
     }
 
     .contact-solutions-container {
@@ -779,6 +789,10 @@ hr {
 
     .contact-us {
         align-items: flex-start;
+    }
+
+    footer {
+        padding: 50px 45px;
     }
 
     .brand-container,
